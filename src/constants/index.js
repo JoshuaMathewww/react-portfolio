@@ -1,71 +1,31 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
-
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    title: "LEXHACK | MARKETING DIRECTOR | JANUARY-MAY 2022",
+    description: "Organized a hackathon for middle and high schoolers with multiple workshops run by professional speakers. 240+ students registered for the 2-day hackathon. Raised over $7,500 in funding and sponsorship from MITRE, Wolfram Alpha, EA Education, echo3D, AoPS, PLE, and AICS.",
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    title: "IOTA DIVISION | CO-FOUNDER| AUGUST-SEPTEMBER 2022",
+    description: "An ankle attachment that aids the elderly when walking. Product alerts selected users when an issue arises and deploys the necessary solutions to solve the issue. Technology includes PCB Board, Serial Transceiver, Microcontroller, and more. ",
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    title: "CODE NINJAS | EMPLOYEE | FEBRUARY 2021- SEPTEMBER 2024 ",
+    description: "Served as a coding instructor to hundreds of elementary students, providing them with an introduction to coding using educational tools such as Scratch and JavaScript. Finding inventive ways to communicate difficult coding ideas in manageable chunks. Discovered the value of flexibility and patience when working with young students.",
   },
   {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
-];
-
-export const PROJECTS = [
-  {
-    title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+    title: "CS/CE DEVELOPMENT | 2021-2024",
+    description: "IOS Developer- Created classic games using Swift and Xcode for the iPhone.                                                                        Unity Game Development - Used C# and Godot to create games/apps and design workflows. Explored and developed a compatible user-friendly interface and level progression.                                                                  Hackathons (High Tech Hacks 2.0, FreyHacks, NeoHack 2.0 Devpost) - Was responsible for constructing backend code for a website purposed to serve and promote general wellness.                                                                             Wheeled Robot (Independent & Boston Leadership Institute) - Arduino-based robot capable of autonomously navigating its environment using sensors such as photoresistor, ultrasonic sensor, and gyroscopes.   ",
   },
   {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    title: "HARVARD MEDICAL RESEARCH | INTERN | JULY-AUGUST 2023",
+    description: "Studied approaches to tune encapsulation, release kinetics, and cytotoxicity to improve an intranasal drug delivery system; showcased results. Administered an independent project to see the encapsulation and release kinetics of a drug with varying levels of gellan in a nasal formulation. Co-authored a paper.",
   },
   {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+    title: "AI SCHOLAR | ASSOCIATE DEVELOPER | AUGUST 2022",
+    description: "Analyzed financial news sentiment, assessed NLP, and designed a model that evaluates news articles to deduce whether it has positive or negative connotations. I worked alongside three high school students and an undergraduate, who introduced AI with Python libraries.",
   },
 ];
 

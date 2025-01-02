@@ -9,6 +9,7 @@ export function AniHighlight({ children }) {
     const isInView = useInView(ref, { once: true });
     const mainControls = useAnimation();
     const slideControls = useAnimation();
+    
 
     useEffect(() => {
         if (isInView) {
@@ -18,7 +19,7 @@ export function AniHighlight({ children }) {
     }, [isInView]);
 
     return (
-        <div ref={ref} style={{ position: "relative", width: "fit-content", overflow: "hidden" }}>
+        <div ref={ref} style={{ position: "relative", width: "fit-content", overflow: "hidden"}}>
             <motion.div
                 variants={{
                     hidden: {opacity: 0, y: 100 },
@@ -26,10 +27,11 @@ export function AniHighlight({ children }) {
               }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.25 }}>
+            transition={{ duration: 0.5, delay: 0.25 }}> 
             {children}
             </motion.div>
             <motion.div
+            
                 variants={{
                     hidden: { right: 0 },
                     visible: { right: "100%" },
