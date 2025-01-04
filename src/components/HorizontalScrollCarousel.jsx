@@ -66,10 +66,10 @@ const cards = [
         id: 1,
     },
     {
-        title: "IOTA DIVISION",
-        role: "CO-FOUNDER",
-        date: "AUGUST-SEPTEMBER 2022",
-        description: "An ankle attachment that aids the elderly when walking. Product alerts selected users when an issue arises and deploys the necessary solutions to solve the issue. Technology includes PCB Board, Serial Transceiver, Microcontroller, and more. ",
+        title: "L-MIT BIOTECH",
+        role: "Virtual Lab Participant",
+        date: "OCTOBER-DECEMBER 2022",
+        description: "Used virtual labs, online learning, and real-time conversations with employees of both Biogen and MIT to learn all about biotechnology and invention with a focus on Alzheimer’s and Digital Medicine. Created an innovative solution via apps to aid patients suffering from neurodegenerative diseases.",
         id: 2,
     },
     {
@@ -80,25 +80,32 @@ const cards = [
         id: 3,
     },
     {
-        title: "CS/CE DEVELOPMENT",
+        title: "CS DEVELOPMENT",
         role: "Independent",
         date: "2021-2024",
-        description: "IOS Developer- Created classic games using Swift and Xcode for the iPhone. Unity Game Development - Used C# and Godot to create games/apps and design workflows. Explored and developed a compatible user-friendly interface and level progression. Hackathons (High Tech Hacks 2.0, FreyHacks, NeoHack 2.0 Devpost) - Was responsible for constructing backend code for a website purposed to serve and promote general wellness. Wheeled Robot (Independent & Boston Leadership Institute) - Arduino-based robot capable of autonomously navigating its environment using sensors such as photoresistor, ultrasonic sensor, and gyroscopes. ",
+        description: "IOS Developer- Created classic games using Swift and Xcode for the iPhone. Unity Game Development - Used C# and Godot to create games/apps and design workflows. Explored and developed a compatible user-friendly interface and level progression. Hackathons (High Tech Hacks 2.0, FreyHacks, NeoHack 2.0 Devpost) - Was responsible for constructing backend code for a website purposed to serve and promote general wellness. ",
         id: 4,
     },
+    {
+        title: "CE DEVELOPMENT",
+        role: "Independent",
+        date: "2021-2024",
+        description: "Wheeled Robot (Independent & Boston Leadership Institute) - Arduino-based robot capable of autonomously navigating its environment using sensors such as photoresistor, ultrasonic sensor, and gyroscopes. Iota Division - An ankle attachment that alerts nearby guardians when elderly adult falls. Technology includes PCB Board, Serial Transceiver, Microcontroller, and more. ",
+        id: 5,
+    }, 
     {
         title: "HARVARD MEDICAL RESEARCH",
         role: "INTERN",
         date: "JULY-AUGUST 2023",
         description: "Studied approaches to tune encapsulation, release kinetics, and cytotoxicity to improve an intranasal drug delivery system; showcased results. Administered an independent project to see the encapsulation and release kinetics of a drug with varying levels of gellan in a nasal formulation. Co-authored a paper.",
-        id: 5,
+        id: 6,
     },
     {
         title: "AI SCHOLAR",
         role: "ASSOCIATE DEVELOPER",
         date: "AUGUST 2022",
         description: "Analyzed financial news sentiment, assessed NLP, and designed a model that evaluates news articles to deduce whether it has positive or negative connotations. I worked alongside three high school students and an undergraduate, who introduced AI with Python libraries.",
-        id: 6,
+        id: 7,
     },
 ];
 

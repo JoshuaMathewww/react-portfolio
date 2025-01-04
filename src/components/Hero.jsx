@@ -3,6 +3,18 @@ import profilePic from "../assets/joshuaMathewProfile.jpeg"
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
+const PopupImage = ({ source, altText, ...rest }) => {
+    return (
+      <img
+        src={source}
+        alt={altText}
+        {...rest}
+        className="transition-all duration-500 hover:translate-x-[-7px] hover:translate-y-[-7px] hover:shadow-[12px_12px_4px_rgba(229,231,235,0.65)]"
+        // active:translate-x-[0px] active:translate-y-[0px] active:shadow-none
+        style={{ borderRadius: '20px' }}
+      />
+    );
+  };
 
 export function AniHighlight({ children }) {
     const ref = useRef(null);
@@ -19,7 +31,7 @@ export function AniHighlight({ children }) {
     }, [isInView]);
 
     return (
-        <div ref={ref} style={{ position: "relative", width: "fit-content", overflow: "hidden"}}>
+        <div ref={ref} style={{ position: "relative", width: "fit-content", height: "fit-content"}}>
             <motion.div
                 variants={{
                     hidden: {opacity: 0, y: 100 },
@@ -29,9 +41,7 @@ export function AniHighlight({ children }) {
             animate={mainControls}
             transition={{ duration: 0.5, delay: 0.25 }}> 
             {children}
-            </motion.div>
             <motion.div
-            
                 variants={{
                     hidden: { right: 0 },
                     visible: { right: "100%" },
@@ -41,14 +51,15 @@ export function AniHighlight({ children }) {
                 transition={{ duration: 0.5, ease: "easeIn" }}
                 style={{
                     position: "absolute",
-                    top: 4,
-                    bottom: 4,
+                    top: 0,
+                    bottom: 0,
                     left: 0,
                     right: 0,
                     background: "linear-gradient(to right, #252a33, #1d2128, #181b20)",
                     zIndex: 20,
                 }}
             />
+            </motion.div>
         </div>
     );
 }
@@ -79,7 +90,10 @@ const Hero = () => {
                 <div className="w-full lg:w-1/2 lg:p-8">
                     <div className="flex justify-center">
                         <AniHighlight>
-                            <img width="400" height="500" src={profilePic} alt="Joshua Mathew" />
+                        {/* classNameabsolute left-0 top-0 h-[2px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full
+                        <span className="  transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"> */}
+                                <PopupImage src={profilePic} alt="Joshua Mathew" width="400" height="500"> 
+                                </PopupImage>
                         </AniHighlight>
                     </div>
                 </div>
