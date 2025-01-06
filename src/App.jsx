@@ -1,3 +1,4 @@
+import About from "./components/About"
 import Hero from "./components/Hero"
 import HorizontalScrollCarousel from "./components/HorizontalScrollCarousel"
 import Navbar from "./components/Navbar"
@@ -12,6 +13,13 @@ const App = () => {
      <div className="Container mx-auto px-8">
       <Navbar />
       <Hero />
+      <h1 className="pt-[50px] pb-[100px] text-5xl font-bold text-white tracking-tight lg;mt-16 lg;text-8x w-full lg:w-1/2 pl-20">
+        About Me
+      </h1>
+      <About />
+      <h1 className="pt-[150px] text-5xl font-bold text-white tracking-tight lg;mt-16 lg;text-8x w-full lg:w-1/2 pl-20">
+        Experiences
+      </h1>
       <HorizontalScrollCarousel />
       <Technologies />
      </div>

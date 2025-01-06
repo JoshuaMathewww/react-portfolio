@@ -1,20 +1,76 @@
 import { HERO_CONTENT } from "../constants"
 import profilePic from "../assets/joshuaMathewProfile.jpeg"
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, useMotionTemplate, useMotionValue, useSpring} from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const PopupImage = ({ source, altText, ...rest }) => {
-    return (
+const ROTATION_RANGE = 32.5;
+const HALF_ROTATION_RANGE = 32.5 / 2;
+
+const TiltImg = ({ source, altText}) => {
+  const ref = useRef(null);
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const xSpring = useSpring(x);
+  const ySpring = useSpring(y);
+
+  const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
+
+  const handleMouseMove = (e) => {
+    if (!ref.current) return [0, 0];
+
+    const rect = ref.current.getBoundingClientRect();
+
+    const width = rect.width;
+    const height = rect.height;
+
+    const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
+    const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
+
+    const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+    const rY = mouseX / width - HALF_ROTATION_RANGE;
+
+    x.set(rX);
+    y.set(rY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        transformStyle: "preserve-3d",
+        transform,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "15px"
+      }}    
+      className="relative h-[620px] w-[525px] rounded-xl bg-gradient-to-br from-[#4A4E69] via-[#22223B] to-[#1D1D35]"
+    >
       <img
         src={source}
         alt={altText}
-        {...rest}
-        className="transition-all duration-500 hover:translate-x-[-7px] hover:translate-y-[-7px] hover:shadow-[12px_12px_4px_rgba(229,231,235,0.65)]"
-        // active:translate-x-[0px] active:translate-y-[0px] active:shadow-none
-        style={{ borderRadius: '20px' }}
+        className="rounded-xl"
+        style={{
+          width: "100%",  
+          height: "100%",  
+          objectFit: "cover",  
+          borderRadius: "inherit",  
+          transform: "translateZ(75px)",
+          transformStyle: "preserve-3d",
+        }}
       />
-    );
-  };
+    </motion.div>
+  );
+};
 
 export function AniHighlight({ children }) {
     const ref = useRef(null);
@@ -66,9 +122,9 @@ export function AniHighlight({ children }) {
 
 const Hero = () => {
     return (
-        <div className="border-b border-neutral-900 pb-4 lg:mb-35">
-            <div className="flex flex-wrap">
-                <div className="w-full lg:w-1/2">
+        <div className="pb-4 lg:mb-35">
+            <div className="flex flex-wrap pt-[100px] pb-[200px]">
+                <div className="w-full lg:w-1/2 pl-20">
                     <div className="flex flex-col items-center lg:items-start">
                         <AniHighlight>
                             <h1 className="pb-16 text-6xl font tracking-tight lg;mt-16 lg;text-8xl">
@@ -81,24 +137,22 @@ const Hero = () => {
                             </span>
                         </AniHighlight>
                         <AniHighlight>
-                            <p className="my-2 max-w-xl py-6 font-light tracking-tighter">
+                            <p className="my-2 max-w-[700px] py-6 font-light tracking-tighter">
                                 {HERO_CONTENT}
                             </p>
                         </AniHighlight>
                     </div>
                 </div>
-                <div className="w-full lg:w-1/2 lg:p-8">
+                <div className="w-full lg:w-1/2 pl-10">
                     <div className="flex justify-center">
                         <AniHighlight>
-                        {/* classNameabsolute left-0 top-0 h-[2px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full
-                        <span className="  transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"> */}
-                                <PopupImage src={profilePic} alt="Joshua Mathew" width="400" height="500"> 
-                                </PopupImage>
+                            <TiltImg source={profilePic} altText="Joshua Mathew" />
                         </AniHighlight>
                     </div>
                 </div>
             </div>
         </div>
+        
     )
 }
 

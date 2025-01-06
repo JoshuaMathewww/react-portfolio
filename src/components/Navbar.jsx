@@ -3,13 +3,17 @@ import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa"
 import { FaFacebook } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { useState } from "react"
+
+const tabs = ["Home", "About", "Experiences"];
 
 const OutlineOnButton = ({ children, color, ...rest }) => {
     const colorMap = {
-        linkedin: "hover:text-blue-500 bg-blue-500",
-        github: "hover:text-gray-500 bg-gray-500",
-        instagram: "hover:text-pink-500 bg-pink-500",
-        facebook: "hover:text-blue-600 bg-blue-600"
+        linkedin: "hover:text-[#0b66c2] bg-[#0b66c2]",
+        github: "hover:text-[#f0f6fc] bg-[#f0f6fc]",
+        instagram: "hover:text-[#fc03d7] bg-[#fc03d7]",
+        facebook: "hover:text-[#0766ff] bg-[#0766ff]"
     };
     const selectedColor = colorMap[color]
     return (
@@ -26,14 +30,64 @@ const OutlineOnButton = ({ children, color, ...rest }) => {
     );
 };
 
+const ChipTabs = () => {
+    const [selected, setSelected] = useState(tabs[0]);
+  
+    return (
+      <div className="px-4 py-14 flex items-center flex-wrap gap-2">
+        {tabs.map((tab) => (
+          <Chip
+            text={tab}
+            selected={selected === tab}
+            setSelected={setSelected}
+            key={tab}
+          />
+        ))}
+      </div>
+    );
+  };
+  
+  const Chip = ({
+    text,
+    selected,
+    setSelected,
+  }) => {
+    return (
+      <button
+        onClick={() => {
+            setSelected(text)
+            if (text === "Home") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            } else if (text === "About") {
+                window.scrollTo({ top: 1425, behavior: "smooth" });
+            } else if (text === "Experiences") {
+                window.scrollTo({ top: 2600, behavior: "smooth" });
+            }
+        }}
+        style={{ fontFamily: '"Inter", sans-serif' }}
+        className={`${selected ? "text-white" : "text-slate-300 hover:text-slate-200 hover:bg-slate-700"} text-sm transition-colors px-2.5 py-0.5 rounded-md relative`}
+      >
+        <span 
+        className="relative z-10">{text}</span>
+        {selected && (
+          <motion.span
+            layoutId="pill-tab"
+            transition={{ type: "spring", duration: 0.5 }}
+            className="absolute inset-0 z-0 bg-gradient-to-r from-gray-500 to-stone-400 rounded-md"
+          ></motion.span>
+        )}
+      </button>
+    );
+  };
 
 const Navbar = () => {
     return (
         <nav className="mb-20 flex items-center justify-between py-6">
-            <div className="flex flex-shrink-0 items-center">
-                <img className="mx-2 w-10" src={logo} alt="logo" />
+            <div className="flex items-center gap-[100px] pl-[40px]">
+                <img className="w-10" src={logo} alt="logo" />
+                <ChipTabs />
             </div>
-            <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+            <div className="m-8 flex items-center justify-end gap-4 text-2xl">
                 <a href="https://www.linkedin.com/in/yourprofile">
                     <OutlineOnButton color="linkedin">
                         <FaLinkedin />

@@ -66,10 +66,10 @@ const cards = [
         id: 1,
     },
     {
-        title: "L-MIT BIOTECH",
-        role: "Virtual Lab Participant",
-        date: "OCTOBER-DECEMBER 2022",
-        description: "Used virtual labs, online learning, and real-time conversations with employees of both Biogen and MIT to learn all about biotechnology and invention with a focus on Alzheimer’s and Digital Medicine. Created an innovative solution via apps to aid patients suffering from neurodegenerative diseases.",
+        title: "AI SCHOLAR",
+        role: "ASSOCIATE DEVELOPER",
+        date: "AUGUST 2022",
+        description: "Analyzed financial news sentiment, assessed NLP, and designed a model that evaluates news articles to deduce whether it has positive or negative connotations. I worked alongside three high school students and an undergraduate, who introduced ML with Python libraries.",
         id: 2,
     },
     {
@@ -101,10 +101,10 @@ const cards = [
         id: 6,
     },
     {
-        title: "AI SCHOLAR",
-        role: "ASSOCIATE DEVELOPER",
-        date: "AUGUST 2022",
-        description: "Analyzed financial news sentiment, assessed NLP, and designed a model that evaluates news articles to deduce whether it has positive or negative connotations. I worked alongside three high school students and an undergraduate, who introduced AI with Python libraries.",
+        title: "L-MIT BIOTECH",
+        role: "Virtual Lab Participant",
+        date: "OCTOBER-DECEMBER 2022",
+        description: "Used virtual labs, online learning, and real-time conversations with employees of both Biogen and MIT to learn all about biotechnology and invention with a focus on Alzheimer’s and Digital Medicine. Created an innovative solution via apps to aid patients suffering from neurodegenerative diseases.",
         id: 7,
     },
 ];

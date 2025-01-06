@@ -32,7 +32,7 @@ const Technologies = () => {
                     </h1>
                 </AniHighlight>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center pb-20">
                 <AniHighlight>
                     <div className="flex flex-wrap items-center justify-center gap-4">
                         <motion.div
