@@ -61,7 +61,7 @@ const ChipTabs = () => {
             } else if (text === "About") {
                 window.scrollTo({ top: 1425, behavior: "smooth" });
             } else if (text === "Experiences") {
-                window.scrollTo({ top: 2600, behavior: "smooth" });
+                window.scrollTo({ top: 2465, behavior: "smooth" });
             }
         }}
         style={{ fontFamily: '"Inter", sans-serif' }}

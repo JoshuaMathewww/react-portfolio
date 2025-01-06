@@ -25,7 +25,7 @@ export const Cards = () => {
         <Card
           title="Traveling"
           image={traveling}
-          description="After COVID, I really wanted to travel and explore new places. This year, I had the chance to visit San Francisco with friends, and traveled to Texas and London with my family, creating a lot of unforgettable memories together."
+          description="After COVID, I really wanted to travel and explore new places. This year, I had the chance to visit San Francisco with friends and traveled to Texas and London with my family, creating many unforgettable memories together."
         />
       </ParallaxImg>
       <ParallaxImg start={800} end={800} className="self-end">
