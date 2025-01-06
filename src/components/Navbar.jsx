@@ -88,7 +88,7 @@ const Navbar = () => {
                 <ChipTabs />
             </div>
             <div className="m-8 flex items-center justify-end gap-4 text-2xl">
-                <a href="https://www.linkedin.com/in/yourprofile">
+                <a href="https://www.linkedin.com/in/joshua-mathew-ab246825a/">
                     <OutlineOnButton color="linkedin">
                         <FaLinkedin />
                     </OutlineOnButton>
