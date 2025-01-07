@@ -11,9 +11,9 @@ const STAGGER = 0.025
 
 const About = () => {
   return (
-    <div className="relative w-full" >
+    <section id="about" className="relative w-full">
       <Cards />
-    </div>
+    </section>
   );
 };
 

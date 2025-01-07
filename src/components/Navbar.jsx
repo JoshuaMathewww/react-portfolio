@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa"
 import { motion } from "framer-motion"
 import { useState } from "react"
 
-const tabs = ["Home", "About", "Experiences"];
+const tabs = ["About", "Experiences", "Contact"];
 
 const OutlineOnButton = ({ children, color, ...rest }) => {
     const colorMap = {
@@ -56,12 +56,18 @@ const ChipTabs = () => {
       <button
         onClick={() => {
             setSelected(text)
-            if (text === "Home") {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            } else if (text === "About") {
-                window.scrollTo({ top: 1425, behavior: "smooth" });
+            if (text === "About") {
+                document.getElementById("about")?.scrollIntoView({
+                    behavior: "smooth",
+                });
             } else if (text === "Experiences") {
-                window.scrollTo({ top: 2465, behavior: "smooth" });
+                document.getElementById("experience")?.scrollIntoView({
+                    behavior: "smooth",
+                });
+            } else if (text === "Contact") {
+                document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                });
             }
         }}
         style={{ fontFamily: '"Inter", sans-serif' }}

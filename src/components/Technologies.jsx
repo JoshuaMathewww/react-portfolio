@@ -24,7 +24,7 @@ const iconVariants = (duration) => ({
 })
 const Technologies = () => {
     return (
-        <div className="border-b border-neutral-800">
+        <div className="">
             <div className="flex justify-center">
                 <AniHighlight>
                     <h1 className="my-20 text-center text-4xl">

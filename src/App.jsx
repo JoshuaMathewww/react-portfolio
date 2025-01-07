@@ -1,4 +1,5 @@
 import About from "./components/About"
+import ContactSection from "./components/ContactSection"
 import Hero from "./components/Hero"
 import HorizontalScrollCarousel from "./components/HorizontalScrollCarousel"
 import Navbar from "./components/Navbar"
@@ -22,6 +23,7 @@ const App = () => {
       </h1>
       <HorizontalScrollCarousel />
       <Technologies />
+      <ContactSection />
      </div>
     </div>  
   )
