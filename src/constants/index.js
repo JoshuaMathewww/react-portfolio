@@ -1,4 +1,4 @@
-export const HERO_CONTENT = `I am a developer who started in Java and Python, later expanding into C and C++. I explored web development with JavaScript, HTML, CSS, and React, while also participating in external programs where I learned machine learning using Python libraries like Matplotlib, Pandas, and NumPy. Beyond software, I’ve worked with Godot and Unity for game design, using their respective scripting languages, and learned Swift for iOS development along with some Lua for game development.`;
+export const HERO_CONTENT = `I am a developer who started in Java and Python, later expanding into C# and C++. I explored web development with JavaScript, HTML, CSS, and React, while also participating in external programs where I learned machine learning using Python libraries like Matplotlib, Pandas, and NumPy. Beyond software, I’ve worked with Godot and Unity for game design, using their respective scripting languages, and learned Swift for iOS development along with some Lua for game development.`;
 
 export const EXPERIENCES = [
   {
