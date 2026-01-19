@@ -57,13 +57,6 @@ const Technologies = () => {
                             <RiJavascriptFill className="text-7xl text-white-400" />
                         </motion.div>
                         <motion.div
-                            variants={iconVariants(1.5)}
-                            inital="inital"
-                            animate="animate"
-                            className="rounded-2xl border-4 border-neutral-800 p-4">
-                            <SiCplusplus className="text-7xl text-sky-600" />
-                        </motion.div>
-                        <motion.div
                             variants={iconVariants(3)}
                             inital="inital"
                             animate="animate"
